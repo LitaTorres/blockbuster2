@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Customers</h1>
+
+<div id="customers">
+  <% @customers.each do |customer| %>
+    <%= customer.name %>
+    
+
+  <% if customer.movie.present? %>
+    <p> <b> La peli que tiene arrendada es <%= customer.movie.title %> </b> </p>
+
+  <% else %>
+      <p> <b> No tiene pelicula arrendada </b> </p>
+  <% end %>
+
+      <%= link_to "Show this customer", customer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New customer", new_customer_path %>
+
+
+<!--5 el _AAA  indica que se puede reutilizar e invocar en otras vistas ese código completito-->
+<!-- mediante el uso del helper  render AAA -->
+<!-- 21 (creo q 21) me piden mostrar si el cliente tiene una peli arrendada por lo tanto usaré un radio -->
+<!-- La linea 7 era helper render customer y en la vista index salia todo pero ahi lo cambie para que salga solo el nombre-->
+<!-- Acá se agrego la condición 10 al 22 para que salga el nombre de la peli q tienen arrendada-->

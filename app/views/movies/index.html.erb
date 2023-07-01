@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Movies</h1>
+
+<div id="movies">
+  <% @movies.each do |movie| %>
+    <%= movie.title %>
+    <p>
+      <%= link_to "Show this movie", movie %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New movie", new_movie_path %>
+
+<!-- 11 acá como la vista index invoca a _movie se muestra en la ista /movies el titulo, date-->
+<!-- y el listado de clientes pero quiero que solo se muestre el titulo de la peli-->
+<!-- xq al hacer clic se desplegará toda la información gracias a show.html-->
+<!-- asi q la linea 7 del helper render movie la modifiqué por lo q ahí sale-->

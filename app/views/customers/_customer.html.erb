@@ -1,0 +1,31 @@
+<div id="<%= dom_id customer %>">
+  <p>
+    <strong>Name:</strong>
+    <%= customer.name %>
+  </p>
+
+  <p>
+    <strong>Tin:</strong>
+    <%= customer.tin %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= customer.email %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= customer.address %>
+  </p>
+
+  <p>
+    <strong>Movie:</strong>
+    <%= customer.movie.title %>
+  </p>
+
+</div>
+
+<!-- 7 en la vista customer muestra el nombre, correo, dirección y el nombre de la peli-->
+<!--- antes decia customer.movie_id para mostrar el id de la peli -->
+<!-- ahora el nombre de la peli q viene de tabla movie y q tiene acceso x la FK-->

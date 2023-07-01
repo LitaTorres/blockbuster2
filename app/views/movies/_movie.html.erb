@@ -1,0 +1,21 @@
+<div id="<%= dom_id movie %>">
+  <p>
+    <strong>Title:</strong>
+    <%= movie.title %>
+  </p>
+
+  <% if movie.customers.count > 0 %>
+    <p> <b> Clientes de <%= movie.title %> </b> </p>
+    <ul>
+      <% movie.customers.each do |x|%>
+       <li> <%= x.name %> </li>
+     <% end %>
+   </ul>
+  <% else %>
+      <p> <b> No tiene clientes aún </b> </p>
+  <% end %>
+
+</div>
+
+<!-- 8 acá originalmente tengo para mostrar el titulo y la fecha pero tb quiero mostrar -->
+<!-- el listado de "clientes " que han arrendado esa pelicula x lo q realizo un ciclo -->
